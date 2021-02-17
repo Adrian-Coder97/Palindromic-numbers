@@ -6,16 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Menu extends AppCompatActivity {
+public class Capicua extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_capicua);
     }
 
-    public void Siguiente(View view){
-        Intent intent = new Intent(this,Capicua.class);
-        startActivity(intent);
+    public void Anterior(View view){
+        Intent anterior = new Intent(this,Menu.class);
+        startActivity(anterior);
+
     }
 }
