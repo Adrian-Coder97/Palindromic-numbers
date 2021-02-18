@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:onClick="Siguiente1"
         android:text="Cambio de posiciones"
         app:backgroundTint="#A59D9D"
         app:layout_constraintEnd_toEndOf="parent"
