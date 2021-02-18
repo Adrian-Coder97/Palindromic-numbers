@@ -39,21 +39,27 @@ public class Capicua extends AppCompatActivity {
             num.setError("llenar este campo");//NO PONER MAYUSCULAS
         }
         if (!valor.isEmpty()) {
-            int valorInt = Integer.parseInt(valor);
+            long valorInt = Integer.parseInt(valor);
             String nume = String.valueOf(valorInt);
             String resul;
             if (valor.length() == 1) {
                 verde();
                 resul = ("El numero " + nume + " si es capicua ya que todos los numeros de un digito son numeros capicua");
                 res.setText(resul);
-            } else if (valor.length() == 2) {
-                if (valor.charAt(0) == valor.charAt(1)) {
+            } else if (valor.length() >= 2) {
+                long num = valorInt, inverso = 0;
+                while (num != 0) {
+                    long digit = num % 10;
+                    inverso = inverso * 10 + digit;
+                    num /= 10;
+                }
+                if (valorInt == inverso) {
                     verde();
-                    resul = ("El numero " + nume + " si es capicua ya que el primer digito es igual al segundo");
+                    resul = ("El numero " + valorInt + " si es capicua ya que si lo invertimos nos da: " + inverso);
                     res.setText(resul);
-                } else if (valor.charAt(0) != valor.charAt(1)) {
+                } else {
                     rojo();
-                    resul = ("El numero " + nume + " no es capicua ya que el primer digito NO es igual al segundo");
+                    resul = ("El numero " + valorInt + " No es capicua");
                     res.setText(resul);
                 }
             }

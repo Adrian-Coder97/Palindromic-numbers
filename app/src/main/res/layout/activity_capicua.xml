@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bokeh"
     android:onClick="Evaluar"
     android:outlineSpotShadowColor="#000000"
-    tools:context=".Capicua">
+    tools:context=".Capicua"
+    android:background="@drawable/sky">
 
     <TextView
         android:id="@+id/textView4"
